@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}
+    Home Page
+{% endblock %}
+{% block content %}
+    <!-- HOME PAGE -->
+    <article id="home-section" class="home">
+        <div class="home-content">
+            <h1 class="big-text">Stop Churn Before It Happens: AI-Powered Predictions</h1>
+            <p>
+                Leverage the power of AI to identify customers likely to churn and take proactive steps to retain them. 
+                Our advanced machine learning algorithms analyze customer behavior, transaction history, and engagement patterns 
+                to predict churn risks with unparalleled accuracy. By identifying at-risk customers early, you can implement 
+                targeted retention strategies, such as personalized offers, tailored communication, and proactive support, 
+                to keep your customers loyal and satisfied. Don't wait for churn to happen—stay ahead with AI-driven insights 
+                and turn potential losses into long-term gains.
+            </p>
+        </div>
+        <!-- <div class="home-media">
+            <img src="{{url_for('static', filename='images/home.jpg') }}" alt="home" class="home-img">
+        </div> -->
+    </article>   
+    
+
+    <!-- PREDICT SECTION -->
+    <!-- Features: ['tenure', 'OnlineSecurity', 'OnlineBackup', 'TechSupport', 'Contract', 'TotalCharges', 'MonthlyCharges', "Churn"] -->
+    <article id="predict-section" class="predict">
+        <div class="predict-header">
+            <h1 class="predict-h1">Predict Customer Churn</h1>
+        </div>
+        <div>
+            <form action="" method="post">
+                <div class="input-group">
+                    <label for="tenure">Tenure (months):</label>
+                    <input type="number" name="tenure" id="tenure" value="{{ request.form.tenure }}">
+                </div>
+            </form>
+        </div>    
+    </article>
+    <article id="services-section" class="services">
+        
+        <div class="services-header">
+            <h1 class="service-h1">Services</h1>
+        </div>     
+        
+        <div class="services-content">
+            <div class="service">
+                <h2>Predictive Analytics</h2>                
+                <div class="service-block">                    
+                    <img src="{{url_for('static', filename='images/predictive_analytics.svg') }}" alt="predictive-analytics" class="service-img">
+                    <p>Identify customers likely to churn with advanced machine learning algorithms that analyze customer behavior, transaction history, and engagement patterns.</p>
+                </div> 
+            </div>
+            <div class="service">
+                <h2>Customer Retention Strategies</h2>
+                <div class="service-block">
+                    <img src="{{url_for('static', filename='images/customer retention.svg') }}" alt="customer-retention" class="service-img">
+                    <p>Implement targeted retention strategies, such as personalized offers, tailored communication, and proactive support, to keep your customers loyal and satisfied.</p>
+                </div>
+            </div>
+            <div class="service">
+                <h2>Surveys and Feedback</h2>
+                <div class="service-block">
+                    <img src="{{url_for('static', filename='images/surveys.svg') }}" alt="surveys-feedback" class="service-img">
+                    <p>Analyze customer feedback and survey responses to understand why customers churn and identify areas for improvement in products, services, and customer experience.</p>
+                </div>
+            </div>
+            <div class="service">
+                <h2>Consultations</h2>
+                <div class="service-block">                    
+                    <img src="{{url_for('static', filename='images/consultation.svg') }}" alt="consultations" class="service-img">
+                    <p>Get expert advice and guidance on customer churn prevention strategies, data analysis, and AI-driven solutions to optimize customer retention and maximize business growth.</p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article id="about-section" class="about">
+        <div class="about-header">
+            <h1 class="about-h1">About Us</h1>
+        </div>
+        <div class="about-container">
+            <div class="about-content">
+                <p class="about-us">
+                    Welcome to Customer Churn Predictor, where we make things simple and effective.
+    
+                    We believe in providing prediction, advice and cunsulation services that are reliable, easy to use, and customer-focused. Our goal is to ensure you get the best experience without unnecessary hassle.
+    
+                    Our team of experts is dedicated to helping you predict customer churn, retain customers, and grow your business. We combine advanced machine learning algorithms, data analysis, and industry expertise to deliver actionable insights and recommendations that drive results.
+    
+                    We believe in the power of data-driven decision-making and the potential of AI to transform businesses. By leveraging the latest technologies and best practices, we help you stay ahead of the competition and achieve sustainable growth.
+                    
+                </p>
+                <div class="mission">Retaining Customers is easier than looking for new ones!!</div>
+            </div>
+        </div>       
+            
+    </article>
+    
+{% endblock %}

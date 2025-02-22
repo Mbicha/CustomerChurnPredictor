@@ -1,0 +1,49 @@
+1. Demographic Features: Gender, Partner, Dependents, SeniorCitizen
+Hypotheses:
+
+H1: Senior citizens are more likely to churn compared to younger customers.
+
+H2: Customers with dependents are less likely to churn due to the need for consistent service.
+
+H3: Customers with a partner are less likely to churn compared to single customers.
+
+H4: Gender has no significant impact on churn rates.
+
+H5: Senior citizens with dependents are more likely to stay with the service due to reliance on consistent connectivity.
+
+2. Financial and Account Features: Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges
+Hypotheses:
+
+H6: Customers with month-to-month contracts are more likely to churn compared to those with long-term contracts.
+
+H7: Customers using electronic payment methods (e.g., credit card, e-check) are less likely to churn compared to those using mailed checks.
+
+H8: Higher monthly charges are associated with a higher likelihood of churn.
+
+H9: Customers with paperless billing are more likely to churn due to potential issues with billing transparency.
+
+H10: Customers with higher total charges (long-term customers) are less likely to churn due to loyalty or sunk cost bias.
+
+3. Customer Services: PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies
+Hypotheses:
+
+H11: Customers without internet service are less likely to churn because they rely on basic services.
+
+H12: Customers with additional services like online security, online backup, and tech support are less likely to churn.
+
+H13: Customers who use streaming services (TV and movies) are more likely to churn if they experience service interruptions.
+
+H14: Customers with multiple lines are less likely to churn due to higher dependency on the service.
+
+H15: Customers who have experienced frequent tech support issues are more likely to churn.
+
+Cross-Category Hypotheses:
+H16: Senior citizens with high monthly charges are more likely to churn due to budget constraints.
+
+H17: Customers with dependents and additional services (e.g., online backup, tech support) are less likely to churn.
+
+H18: Customers with long-term contracts and high total charges are less likely to churn due to loyalty.
+
+H19: Customers with paperless billing and high monthly charges are more likely to churn due to perceived lack of value.
+
+H20: Customers with no internet service and low monthly charges are less likely to churn due to satisfaction with basic services.
