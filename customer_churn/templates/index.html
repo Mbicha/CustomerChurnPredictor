@@ -28,12 +28,75 @@
         <div class="predict-header">
             <h1 class="predict-h1">Predict Customer Churn</h1>
         </div>
-        <div>
+        <div class="form-container">
+            <span class="form-header">Prediction Features</span>
             <form action="" method="post">
-                <div class="input-group">
-                    <label for="tenure">Tenure (months):</label>
-                    <input type="number" name="tenure" id="tenure" value="{{ request.form.tenure }}">
-                </div>
+                <!-- Tenure -->
+                <fieldset class="field_input">
+                    <legend id="tenure" class="field_label">Enter Tenure:</legend>
+                    <input type="number" name="tenure" id="tenure" class="field_input" required>
+                </fieldset>
+
+                <!-- Online Security -->
+                <fieldset class="field_input">
+                    <legend id="online_security" class="field_label">Choose Online Security:</legend>
+                    <input type="radio" name="online_security" id="No" value="No" >
+                    <label for="No" class="dt_value">No</label>
+                    <input type="radio" name="No internet service" id="No internet service" value="No internet service">
+                    <label for="No internet service" class="dt_value">No internet service</label>
+                    <input type="radio" name="online_security" id="Yes" value="Yes">
+                    <label for="Yes" class="dt_value">Yes</label>                    
+                </fieldset>
+
+                <!-- Online Backup -->
+                <fieldset class="field_input">
+                    <legend id="online_backup" class="field_label">Choose Online Backup:</legend>
+                    <input type="radio" name="online_backup" id="No" value="No">
+                    <label for="No" class="dt_value">No</label>
+                    <input type="radio" name="No internet service" id="No internet service" value="No internet service">
+                    <label for="No internet service" class="dt_value">No internet service</label>
+                    <input type="radio" name="online_backup" id="Yes" value="Yes">
+                    <label for="Yes" class="dt_value">Yes</label>
+                </fieldset>
+
+                <!-- Tech Support -->
+                <fieldset class="field_input">
+                    <legend id="tech_support" class="field_label">Choose Tech Support:</legend>
+                    <input type="radio" name="tech_support" id="No" value="No" >
+                    <label for="No" class="dt_value">No</label>
+                    <input type="radio" name="No internet service" id="No internet service" value="No internet service">
+                    <label for="No internet service" class="dt_value">No internet service</label>
+                    <input type="radio" name="tech_support" id="Yes" value="Yes">
+                    <label for="Yes" class="dt_value">Yes</label>
+                </fieldset>
+
+                <!-- Contract -->
+                <fieldset class="field_input">
+                    <legend id="contract" class="field_label">Choose Contract:</legend>
+                    <input type="radio" name="contract" id="Month-to-month" value="Month-to-month">
+                    <label for="Month-to-month" class="dt_value">Month-to-month</label>
+                    <input type="radio" name="One year" id="One year" value="One year">
+                    <label for="One year" class="dt_value">One year</label>
+                    <input type="radio" name="Two year" id="Two year" value="Two year">
+                    <label for="Two year" class="dt_value">Two year</label>
+                </fieldset>
+
+                <!-- Total Charges -->
+                <fieldset class="field_input">
+                    <legend id="total_charges" class="field_label">Enter Total Charges:</legend>
+                    <input type="number" name="total_charges" id="total_charges" class="field_input" required>
+                </fieldset>
+
+                <!-- Monthly Charges -->
+                <fieldset class="field_input">
+                    <legend id="monthly_charges" class="field_label">Enter Monthly Charges:</legend>
+                    <input type="number" name="monthly_charges" id="monthly_charges" class="field_input" required>
+                </fieldset>
+
+                <!-- Submit Button -->
+                <fieldset class="field_input">
+                    <input type="submit" value="Predict Churn" class="submit-button">
+                </fieldset>
             </form>
         </div>    
     </article>

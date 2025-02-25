@@ -273,6 +273,31 @@ header {
     animation: grow 2s infinite;
 }
 
+/* PREDICTION PAGE */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    border: 1px solid #008080;
+    border-radius: 1rem;
+    transition: all 0.8s ease-in-out;
+    padding: 1rem;
+}
+
+.form-header {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #008080;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 200;
+}
+
 /* RESPONSIVE DESIGN */
 @media screen and (max-width: 768px) {
     .hamburger {
