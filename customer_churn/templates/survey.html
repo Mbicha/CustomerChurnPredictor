@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}
+    Customer Churn Predictor
+{% endblock %}
+{% block content %}
+    <!--  Introductory Message  -->
+    <div class="survey-header">
+        <h1 class="survey-h1">Customer Churn Survey</h1>
+
+        <p class="introductory-message">
+            We’re listening—share your thoughts on why customers churn and how we can improve. It’s quick, and your input could unlock exclusives!
+        </p>
+    </div>
+    <div class="survey-form-wrapper">
+        <form action="" method="post" class="survey-form">
+<!--            &lt;!&ndash; Start of Question Answer Card &ndash;&gt;-->
+<!--            <section class="qa-card">-->
+<!--                <div class="question">-->
+<!--                    Q1: How satisfied are you with our product/service?-->
+<!--                </div>-->
+<!--                <div class="answers-card">-->
+<!--                    <div class="answer">-->
+<!--                        <input type="radio" name="reason" id="price" value="Price">-->
+<!--                        <label for="price" class="dt_value">Very Satisified</label>-->
+<!--                    </div>-->
+<!--                    <div class="answer">-->
+<!--                        <input type="radio" name="reason" id="price" value="Price">-->
+<!--                        <label for="price" class="dt_value">Very Satisified</label>-->
+<!--                    </div>-->
+<!--                    <div class="answer">-->
+<!--                        <input type="radio" name="reason" id="price" value="Price">-->
+<!--                        <label for="price" class="dt_value">Very Satisified</label>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </section>-->
+<!--            &lt;!&ndash;    End of Question Answer Card    &ndash;&gt;-->
+            <!-- Start of Question Answer Card -->
+            <section class="qa-card">
+                <div class="question">
+                    Q1: How satisfied are you with our product/service?
+                </div>
+                <div class="answers-card">
+                    <div class="answer">
+                        <input type="radio" name="reason" id="price" value="Price">
+                        <label for="price" class="dt_value">Very Satisified</label>
+                    </div>
+                </div>
+            </section>
+            <!--    End of Question Answer Card    -->
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit" class="submit-button">
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='JS/survey.js') }}" />
+{% endblock %}

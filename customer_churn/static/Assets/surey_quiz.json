@@ -1,0 +1,100 @@
+{
+  "survey": [
+    {
+      "question": "How satisfied are you with our product/service?",
+      "answers": [
+        "Very Satisfied",
+        "Satisfied",
+        "Neutral",
+        "Dissatisfied",
+        "Very Dissatisfied"
+      ]
+    },
+    {
+      "question": "How likely are you to recommend our product/service to others?",
+      "answers": [
+        "Very Likely",
+        "Likely",
+        "Neutral",
+        "Unlikely",
+        "Very Unlikely"
+      ]
+    },
+    {
+      "question": "What is the primary reason for considering leaving or canceling your subscription/service?",
+      "answers": [
+        "Poor customer service",
+        "High pricing",
+        "Lack of features",
+        "Found a better alternative",
+        "Other (please specify)"
+      ]
+    },
+    {
+      "question": "How would you rate the quality of our customer support?",
+      "answers": [
+        "Excellent",
+        "Good",
+        "Average",
+        "Poor",
+        "Very Poor"
+      ]
+    },
+    {
+      "question": "Did you experience any issues with our product/service that were not resolved to your satisfaction?",
+      "answers": [
+        "Yes",
+        "No",
+        "Not Applicable"
+      ]
+    },
+    {
+      "question": "How often do you use our product/service?",
+      "answers": [
+        "Daily",
+        "Weekly",
+        "Monthly",
+        "Rarely",
+        "Never"
+      ]
+    },
+    {
+      "question": "What improvements would you like to see in our product/service?",
+      "answers": [
+        "Better pricing plans",
+        "More features",
+        "Improved customer support",
+        "Enhanced user experience",
+        "Other (please specify)"
+      ]
+    },
+    {
+      "question": "How long have you been using our product/service?",
+      "answers": [
+        "Less than 1 month",
+        "1-6 months",
+        "6-12 months",
+        "1-2 years",
+        "More than 2 years"
+      ]
+    },
+    {
+      "question": "What was the most frustrating aspect of your experience with us?",
+      "answers": [
+        "Difficulty using the product/service",
+        "Lack of communication from the company",
+        "Unresolved technical issues",
+        "Billing or pricing concerns",
+        "Other (please specify)"
+      ]
+    },
+    {
+      "question": "Would you consider returning to our product/service in the future if improvements were made?",
+      "answers": [
+        "Yes",
+        "No",
+        "Maybe"
+      ]
+    }
+  ]
+}

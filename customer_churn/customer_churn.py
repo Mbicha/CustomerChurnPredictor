@@ -4,8 +4,12 @@ from flask import Flask, request, jsonify, render_template
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
+def index():
     return render_template('index.html')
+
+@app.route('/survey/<filename>')
+def takeSurvey(filename):
+    return render_template(filename)
 
 # @app.route('/predict', methods=['POST'])
 # def predict():

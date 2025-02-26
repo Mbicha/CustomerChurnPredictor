@@ -298,6 +298,103 @@ header {
     font-weight: 200;
 }
 
+.field_input {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+#field_input {
+    width: 100%;
+}
+
+.field_label {
+    font-style: italic;
+}
+
+.dt_value {
+    margin: 0.5rem;
+}
+
+.sub-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.submit-button {
+    width: auto;
+    padding: 8px;
+    background-color: #008080;
+    color: #fff;
+    border-radius: 1rem;
+}
+
+/* SURVEY PAGE */
+.survey-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    margin-top: 5.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid #008080;
+    width: 100%;
+}
+
+.survey-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.survey-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    scroll-behavior: smooth;
+    width: 80%;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    transition: all 0.8s ease-in-out;
+    padding: 1rem;
+    padding-left: 2rem 0;
+}
+
+.qa-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 0 1rem #008080;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.answers-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+.answer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 0.5rem;
+}
 /* RESPONSIVE DESIGN */
 @media screen and (max-width: 768px) {
     .hamburger {
