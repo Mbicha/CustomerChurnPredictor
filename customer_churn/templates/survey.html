@@ -13,7 +13,7 @@
     </div>
     <div class="survey-form-wrapper">
         <form action="" method="post" class="survey-form">
-<!--            &lt;!&ndash; Start of Question Answer Card &ndash;&gt;-->
+            <!-- Start of Question Answer Card -->
 <!--            <section class="qa-card">-->
 <!--                <div class="question">-->
 <!--                    Q1: How satisfied are you with our product/service?-->
@@ -33,19 +33,23 @@
 <!--                    </div>-->
 <!--                </div>-->
 <!--            </section>-->
-<!--            &lt;!&ndash;    End of Question Answer Card    &ndash;&gt;-->
+            <!--    End of Question Answer Card    -->
             <!-- Start of Question Answer Card -->
-            <section class="qa-card">
-                <div class="question">
-                    Q1: How satisfied are you with our product/service?
-                </div>
-                <div class="answers-card">
-                    <div class="answer">
-                        <input type="radio" name="reason" id="price" value="Price">
-                        <label for="price" class="dt_value">Very Satisified</label>
+            {% for item in survey_data['survey'] %}
+                <section class="qa-card">
+                    <div class="question">
+                        {{ item['SLNO'] }}. {{ item.question }}
                     </div>
-                </div>
-            </section>
+                    {% for answer in item['answers'] %}
+                        <div class="answers-card">
+                            <div class="answer">
+                                <input type="radio" name="{{ item['SLNO'] }}" id="price" value="Price">
+                                <label for="price" class="dt_value">{{ answer }}</label>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </section>
+            {% endfor %}
             <!--    End of Question Answer Card    -->
 
             <!-- Submit Button -->
