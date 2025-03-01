@@ -393,7 +393,18 @@ header {
     display: flex;
     flex-direction: row;
     width: 100%;
-/*    padding-top: 0.5rem;*/
+}
+
+.submit-button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+#submit-button-survey {
+    width: 20%;
 }
 /* RESPONSIVE DESIGN */
 @media screen and (max-width: 768px) {

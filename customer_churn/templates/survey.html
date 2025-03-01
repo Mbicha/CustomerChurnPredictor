@@ -12,50 +12,27 @@
         </p>
     </div>
     <div class="survey-form-wrapper">
-        <form action="" method="post" class="survey-form">
-            <!-- Start of Question Answer Card -->
-<!--            <section class="qa-card">-->
-<!--                <div class="question">-->
-<!--                    Q1: How satisfied are you with our product/service?-->
-<!--                </div>-->
-<!--                <div class="answers-card">-->
-<!--                    <div class="answer">-->
-<!--                        <input type="radio" name="reason" id="price" value="Price">-->
-<!--                        <label for="price" class="dt_value">Very Satisified</label>-->
-<!--                    </div>-->
-<!--                    <div class="answer">-->
-<!--                        <input type="radio" name="reason" id="price" value="Price">-->
-<!--                        <label for="price" class="dt_value">Very Satisified</label>-->
-<!--                    </div>-->
-<!--                    <div class="answer">-->
-<!--                        <input type="radio" name="reason" id="price" value="Price">-->
-<!--                        <label for="price" class="dt_value">Very Satisified</label>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </section>-->
-            <!--    End of Question Answer Card    -->
-            <!-- Start of Question Answer Card -->
+        <form action="/submit_survey" method="post" class="survey-form">
             {% for item in survey_data['survey'] %}
                 <section class="qa-card">
                     <div class="question">
-                        {{ item['SLNO'] }}. {{ item.question }}
+                        Q{{ item['SLNO'] }}. {{ item.question }}
                     </div>
                     {% for answer in item['answers'] %}
                         <div class="answers-card">
                             <div class="answer">
-                                <input type="radio" name="{{ item['SLNO'] }}" id="price" value="Price">
-                                <label for="price" class="dt_value">{{ answer }}</label>
+                                <input type="radio" name="Q{{ item['SLNO'] }}" id="q{{ item['SLNO'] }}_{{ answer }}" value="{{ answer }}">
+                                <label for="q{{ item['SLNO'] }}_{{ answer }}">{{ answer }}</label><br>
                             </div>
                         </div>
                     {% endfor %}
                 </section>
             {% endfor %}
-            <!--    End of Question Answer Card    -->
 
             <!-- Submit Button -->
-            <input type="submit" value="Submit" class="submit-button">
+            <div class="submit-button-container">
+                <input type="submit" value="Submit" class="submit-button" id="submit-button-survey">
+            </div>
         </form>
     </div>
-
-    <script src="{{ url_for('static', filename='JS/survey.js') }}" />
 {% endblock %}
