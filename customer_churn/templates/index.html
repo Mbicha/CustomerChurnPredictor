@@ -33,73 +33,82 @@
             <form action="" method="post">
                 <!-- Tenure -->
                 <fieldset class="field_input">
-                    <legend id="tenure" class="field_label">Enter Tenure:</legend>
+                    <legend class="field_label">Enter Tenure:</legend>
                     <input type="number" name="tenure" id="tenure" class="field_input" required>
                 </fieldset>
 
                 <!-- Online Security -->
                 <fieldset class="field_input">
-                    <legend id="online_security" class="field_label">Choose Online Security:</legend>
-                    <input type="radio" name="online_security" id="No" value="No" >
-                    <label for="No" class="dt_value">No</label>
-                    <input type="radio" name="No internet service" id="No internet service" value="No internet service">
-                    <label for="No internet service" class="dt_value">No internet service</label>
-                    <input type="radio" name="online_security" id="Yes" value="Yes">
-                    <label for="Yes" class="dt_value">Yes</label>                    
+                    <legend class="field_label">Choose Online Security:</legend>
+                    <input type="radio" name="online_security" id="security_no" value="No">
+                    <label for="security_no" class="dt_value">No</label>
+
+                    <input type="radio" name="online_security" id="security_no_service" value="No internet service">
+                    <label for="security_no_service" class="dt_value">No internet service</label>
+
+                    <input type="radio" name="online_security" id="security_yes" value="Yes">
+                    <label for="security_yes" class="dt_value">Yes</label>
                 </fieldset>
 
                 <!-- Online Backup -->
                 <fieldset class="field_input">
-                    <legend id="online_backup" class="field_label">Choose Online Backup:</legend>
-                    <input type="radio" name="online_backup" id="No" value="No">
-                    <label for="No" class="dt_value">No</label>
-                    <input type="radio" name="No internet service" id="No internet service" value="No internet service">
-                    <label for="No internet service" class="dt_value">No internet service</label>
-                    <input type="radio" name="online_backup" id="Yes" value="Yes">
-                    <label for="Yes" class="dt_value">Yes</label>
-                </fieldset>
+                    <legend class="field_label">Choose Online Backup:</legend>
+                    <input type="radio" name="online_backup" id="backup_no" value="No">
+                    <label for="backup_no" class="dt_value">No</label>
+                    <input type="radio" name="online_backup" id="backup_no_service" value="No internet service">
+                    <label for="backup_no_service" class="dt_value">No internet service</label>
+
+                    <input type="radio" name="online_backup" id="backup_yes" value="Yes">
+                    <label for="backup_yes" class="dt_value">Yes</label>
+                </fieldset>                
 
                 <!-- Tech Support -->
                 <fieldset class="field_input">
-                    <legend id="tech_support" class="field_label">Choose Tech Support:</legend>
-                    <input type="radio" name="tech_support" id="No" value="No" >
-                    <label for="No" class="dt_value">No</label>
-                    <input type="radio" name="No internet service" id="No internet service" value="No internet service">
-                    <label for="No internet service" class="dt_value">No internet service</label>
-                    <input type="radio" name="tech_support" id="Yes" value="Yes">
-                    <label for="Yes" class="dt_value">Yes</label>
+                    <legend class="field_label">Choose Tech Support:</legend>
+                    <input type="radio" name="tech_support" id="support_no" value="No">
+                    <label for="support_no" class="dt_value">No</label>
+
+                    <input type="radio" name="tech_support" id="support_no_service" value="No internet service">
+                    <label for="support_no_service" class="dt_value">No internet service</label>
+
+                    <input type="radio" name="tech_support" id="support_yes" value="Yes">
+                    <label for="support_yes" class="dt_value">Yes</label>
                 </fieldset>
 
                 <!-- Contract -->
                 <fieldset class="field_input">
-                    <legend id="contract" class="field_label">Choose Contract:</legend>
-                    <input type="radio" name="contract" id="Month-to-month" value="Month-to-month">
-                    <label for="Month-to-month" class="dt_value">Month-to-month</label>
-                    <input type="radio" name="One year" id="One year" value="One year">
-                    <label for="One year" class="dt_value">One year</label>
-                    <input type="radio" name="Two year" id="Two year" value="Two year">
-                    <label for="Two year" class="dt_value">Two year</label>
+                    <legend class="field_label">Choose Contract:</legend>
+                    <input type="radio" name="contract" id="contract_month" value="Month-to-month">
+                    <label for="contract_month" class="dt_value">Month-to-month</label>
+
+                    <input type="radio" name="contract" id="contract_one" value="One year">
+                    <label for="contract_one" class="dt_value">One year</label>
+
+                    <input type="radio" name="contract" id="contract_two" value="Two year">
+                    <label for="contract_two" class="dt_value">Two year</label>
                 </fieldset>
 
                 <!-- Total Charges -->
                 <fieldset class="field_input">
-                    <legend id="total_charges" class="field_label">Enter Total Charges:</legend>
+                    <legend class="field_label">Enter Total Charges:</legend>
                     <input type="number" name="total_charges" id="total_charges" class="field_input" required>
                 </fieldset>
 
                 <!-- Monthly Charges -->
                 <fieldset class="field_input">
-                    <legend id="monthly_charges" class="field_label">Enter Monthly Charges:</legend>
+                    <legend class="field_label">Enter Monthly Charges:</legend>
                     <input type="number" name="monthly_charges" id="monthly_charges" class="field_input" required>
                 </fieldset>
 
                 <!-- Submit Button -->
-                <fieldset class="field_input">
+                <div class="sub-btn">
                     <input type="submit" value="Predict Churn" class="submit-button">
-                </fieldset>
+                </div>
             </form>
         </div>    
     </article>
+
+    <!-- SECTION PAGE -->
     <article id="services-section" class="services">
         
         <div class="services-header">
@@ -111,7 +120,9 @@
                 <h2>Predictive Analytics</h2>                
                 <div class="service-block">                    
                     <img src="{{url_for('static', filename='images/predictive_analytics.svg') }}" alt="predictive-analytics" class="service-img">
-                    <p>Identify customers likely to churn with advanced machine learning algorithms that analyze customer behavior, transaction history, and engagement patterns.</p>
+                    <p>Identify customers likely to churn with advanced machine learning algorithms that analyze customer behavior, transaction history, and engagement patterns.</br> Click here to <a href="#"> <span class="call-for-action-link">Predict Churn</span></a>
+
+                    </p>
                 </div> 
             </div>
             <div class="service">
@@ -125,7 +136,9 @@
                 <h2>Surveys and Feedback</h2>
                 <div class="service-block">
                     <img src="{{url_for('static', filename='images/surveys.svg') }}" alt="surveys-feedback" class="service-img">
-                    <p>Analyze customer feedback and survey responses to understand why customers churn and identify areas for improvement in products, services, and customer experience.</p>
+                    <p>Analyze customer feedback and survey responses to understand why customers churn and identify areas for improvement in products, services, and customer experience.</br> 
+                        Click here to <a href="{{ url_for('takeSurvey', filename='survey.html') }}"> <span class="call-for-action-link">Take Survey</span></a>
+                    </p>
                 </div>
             </div>
             <div class="service">

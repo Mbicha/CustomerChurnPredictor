@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}
+    Customer Churn Predictor
+{% endblock %}
+{% block content %}
+    <!--  Introductory Message  -->
+    <div class="survey-header">
+        <h1 class="survey-h1">Customer Churn Survey</h1>
+
+        <p class="introductory-message">
+            We’re listening—share your thoughts on why customers churn and how we can improve. It’s quick, and your input could unlock exclusives!
+        </p>
+    </div>
+    <div class="survey-form-wrapper">
+        <form action="/submit_survey" method="post" class="survey-form">
+            {% for item in survey_data['survey'] %}
+                <section class="qa-card">
+                    <div class="question">
+                        Q{{ item['SLNO'] }}. {{ item.question }}
+                    </div>
+                    {% for answer in item['answers'] %}
+                        <div class="answers-card">
+                            <div class="answer">
+                                <input type="radio" name="Q{{ item['SLNO'] }}" id="q{{ item['SLNO'] }}_{{ answer }}" value="{{ answer }}">
+                                <label for="q{{ item['SLNO'] }}_{{ answer }}">{{ answer }}</label><br>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </section>
+            {% endfor %}
+
+            <!-- Submit Button -->
+            <div class="submit-button-container">
+                <input type="submit" value="Submit" class="submit-button" id="submit-button-survey">
+            </div>
+        </form>
+    </div>
+{% endblock %}
