@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}
+Results Page
+{% endblock %}
+{% block content %}
+
+<article id="results-section" class="results">
+    <div class="results-header">
+        <h1 class="results-h1">Churn Prediction Results</h1>
+    </div>
+    <div class="results-content">
+        <p>
+            {% if prediction == 1 %}
+                The customer is likely to churn ({{ "%.2f"|format(probability.churn * 100) }}% probability).
+            {% else %}
+                The customer is not likely to churn ({{ "%.2f"|format(probability.no_churn * 100) }}% probability).
+            {% endif %}
+        </p>
+        
+        <div class="details">
+            <h3>Details:</h3>
+            <ul>
+                <li>Tenure: {{ processed_data.tenure }} months</li>
+                <li>Monthly Charges: ${{ "%.2f"|format(processed_data.monthly_charges) }}</li>
+                <li>Total Charges: ${{ "%.2f"|format(processed_data.total_charges) }}</li>
+                <li>Contract: {{ processed_data.contract }}</li>
+                <li>Online Security: {{ processed_data.online_security }}</li>
+                <li>Online Backup: {{ processed_data.online_backup }}</li>
+                <li>Tech Support: {{ processed_data.tech_support }}</li>
+            </ul>
+        </div>
+    </div>
+</article>
+
+{% endblock %}
